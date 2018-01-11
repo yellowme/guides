@@ -11,6 +11,7 @@ Una guia para realizar `code reviews` y programar anticipando la revisión de tu
 * [Comentar](#comentar)
 * [Responder](#responder)
 * [Escenarios](#escenarios)
+* [Lenguajes](#lenguajes)
 
 Generales
 --------
@@ -31,7 +32,7 @@ Generales
 Solicitar un `code review`
 -------------------------
 
-    No lo tones personal. La revisión es sobre el código, no sobre tu persona. Es muy fácil mal interpretar la retroalimentación. Intenta leer los comentarios como clarificaciones a dudas libres de agresividad.
+> No lo tones personal. La revisión es sobre el código, no sobre tu persona. Es muy fácil mal interpretar la retroalimentación. Intenta leer los comentarios como clarificaciones a dudas libres de agresividad.
 
 * **Agradece** los comentarios de tus compañeros.
 * **Explicar** por qué una porción de código existe y cual es su intención, incluso realiza preguntas a tu compañero.
@@ -79,3 +80,8 @@ Escenarios
 
 * En caso de que existan muchos comentarios de peticiones de aclaración o soluciones alternativas. Hablen de forma directa por chat, en persona, compartiendo la pantalla, etc.
 * Si un debate se vuelve muy filosófico o académico, muevan la discusión de forma personal en alguna charla de los Viernes.
+
+Lenguajes
+--------------
+
+* [Kotlin](./KOTLIN.md)
