@@ -1,83 +1,87 @@
 Code Review
 ===========
 
-Una guia para realizar code review y tener tu codigo revizado.
+Una guia para realizar `code reviews` y programar anticipando la revisión de tu código.
 
-Everyone
+*Nota:* Si estás en desacuerdo con algún lineamiento, abre un *issue* en este repositorio, los debates en los `code reviews` nutren más estos lineamientos.
+
+* [Generales](#generales)
+* [Solicitar una revisión](#solicitar-un-code-review)
+* [Revisores](#revisores)
+* [Comentar](#comentar)
+* [Responder](#responder)
+* [Escenarios](#escenarios)
+* [Lenguajes](#lenguajes)
+
+Generales
 --------
 
-* Accept that many programming decisions are opinions. Discuss tradeoffs, which
-  you prefer, and reach a resolution quickly.
-* Ask good questions; don't make demands. ("What do you think about naming this
-  `:user_id`?")
-* Good questions avoid judgment and avoid assumptions about the author's
-  perspective.
-* Ask for clarification. ("I didn't understand. Can you clarify?")
-* Avoid selective ownership of code. ("mine", "not mine", "yours")
-* Avoid using terms that could be seen as referring to personal traits. ("dumb",
-  "stupid"). Assume everyone is intelligent and well-meaning.
-* Be explicit. Remember people don't always understand your intentions online.
-* Be humble. ("I'm not sure - let's look it up.")
-* Don't use hyperbole. ("always", "never", "endlessly", "nothing")
-* Don't use sarcasm.
-* Keep it real. If emoji, animated gifs, or humor aren't you, don't force them.
-  If they are, use them with aplomb.
-* Talk synchronously (e.g. chat, screensharing, in person) if there are too many
-  "I didn't understand" or "Alternative solution:" comments. Post a follow-up
-  comment summarizing the discussion.
+* Aceptar que las deciciones de programación son `opiniones`.
+  * Dialoga con tus compañeros, tomen una decisión rápida y precisa.
+* Pregunta, no exijas. Evitamos hacer juicios y suposiciones sobre la perspectiva del autor.
+  * ¿Qué piensas de nombrar esto como `userId`?)
+* Pide aclaraciones si no entiendes un comentario sobre tu código.
+* Evitar el uso de terminos como:
+  * Mi código, tú código, ese código no es mío.
+  * Estúpido, tonto, etc.
+* Sé **explícito**, *recuerda* que las personas no siempre entenderán tu perspectiva y contexto.
+* Sé **humilde**.
+* **No** uses el sarcasmo. El uso inteligente de *emojis* queda a tu consideración.
+* Agrega ligas directas a `commits, ramas, posts, etc`. Tu compañero te lo agradecerá.
 
-Having Your Code Reviewed
+Solicitar un `code review`
 -------------------------
 
-* Be grateful for the reviewer's suggestions. ("Good call. I'll make that
-  change.")
-* A common axiom is "Don't take it personally. The review is of the code, not you." We used to include this, but now prefer to say what we mean: Be aware of [how hard it is to convey emotion online] and how easy it is to misinterpret feedback. If a review seems aggressive or angry or otherwise personal, consider if it is intended to be read that way and ask the person for clarification of intent, in person if possible.
-* Keeping the previous point in mind: assume the best intention from the reviewer's comments.
-* Explain why the code exists. ("It's like that because of these reasons. Would
-  it be more clear if I rename this class/file/method/variable?")
-* Extract some changes and refactorings into future tickets/stories.
-* Link to the code review from the ticket/story. ("Ready for review:
-  https://github.com/organization/project/pull/1")
-* Push commits based on earlier rounds of feedback as isolated commits to the
-  branch. Do not squash until the branch is ready to merge. Reviewers should be
-  able to read individual updates based on their earlier feedback.
-* Seek to understand the reviewer's perspective.
-* Try to respond to every comment.
-* Wait to merge the branch until Continuous Integration (TDDium, TravisCI, etc.)
-  tells you the test suite is green in the branch.
-* Merge once you feel confident in the code and its impact on the project.
+> No lo tones personal. La revisión es sobre el código, no sobre tu persona. Es muy fácil mal interpretar la retroalimentación. Intenta leer los comentarios como clarificaciones a dudas libres de agresividad.
 
-[how hard it is to convey emotion online]: https://www.fastcodesign.com/3036748/why-its-so-hard-to-detect-emotion-in-emails-and-texts
+* **Agradece** los comentarios de tus compañeros.
+* **Explicar** por qué una porción de código existe y cual es su intención, incluso realiza preguntas a tu compañero.
+* **Agrega/Comparte** la liga del `pull request` a tus compañeros de equipo.
+* **Entiende** la perspectiva de tu compañero.
+* **Responde** cada comentario.
 
-Reviewing Code
+Revisores
 --------------
 
-Understand why the change is necessary (fixes a bug, improves the user
-experience, refactors the existing code). Then:
+Lo primero es entender los cambios realizados:
 
-* Communicate which ideas you feel strongly about and those you don't.
-* Identify ways to simplify the code while still solving the problem.
-* If discussions turn too philosophical or academic, move the discussion offline
-  to a regular Friday afternoon technique discussion. In the meantime, let the
-  author make the final decision on alternative implementations.
-* Offer alternative implementations, but assume the author already considered
-  them. ("What do you think about using a custom validator here?")
-* Seek to understand the author's perspective.
-* Sign off on the pull request with a :thumbsup: or "Ready to merge" comment.
+* Solución de errores (bugs).
+* Mejorar la experiencia de usuario.
+* *Refactor* a código existente.
 
-Style Comments
+Luego
+
+* **Identifica** maneras de simplificar el código sin remover funcionalidad.
+* **Ofrece** implementaciones alternativas pensando en que el autor puede ya haber considera tu alternativa. *Recuerda ser educado y a preguntar de forma correcta*
+* **Entender** la perspectiva del autor.
+* **Aprueba** el `pull request`. Ya sea con acciones que brinde la plataforma o un comentario mencionando al autor.
+* Puedes hacer uso de :thumbsup: o felicitaciones cuando tu compañero haya hecho un trabajo más allá lo imaginable.
+
+Comentar
 --------------
 
-Reviewers should comment on missed [style](../style)
-guidelines. Example comment:
+Al comentar se debe hacer referencia a los lineamientos definidos en este repositorio
 
-    [Style](../style):
+    [Guideline Name](www.ourawesomerepo.com):
 
-    > Order resourceful routes alphabetically by name.
+    > Nombramiento de varialbes
 
-An example response to style comments:
+Responder
+--------------
 
-    Whoops. Good catch, thanks. Fixed in a4994ec.
+Ejemplo de un buen comentario de respuesta es:
 
-If you disagree with a guideline, open an issue on the guides repo rather than
-debating it within the code review. In the meantime, apply the guideline.
+    Tienes razón. Muchas gracias. Arreglado en a4994ec
+
+*Nota:* Agregá la liga directa al *commit* donde hices actualizaciones, recuerda que todos tenemos otros pendientes o tareas asignadas.
+
+Escenarios
+--------------
+
+* En caso de que existan muchos comentarios de peticiones de aclaración o soluciones alternativas. Hablen de forma directa por chat, en persona, compartiendo la pantalla, etc.
+* Si un debate se vuelve muy filosófico o académico, muevan la discusión de forma personal en alguna charla de los Viernes.
+
+Lenguajes
+--------------
+
+* [Kotlin](./KOTLIN.md)
