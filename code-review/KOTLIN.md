@@ -2,9 +2,9 @@ Kotlin
 ============
 
 * [Unwrap justificado](#unwrap-justificado)
-* [Código repetido](#evitar-codigo-repetido)
+* [Código repetido](#evitar-repetirse)
 * [Nombramientos](#nombramientos)
-* [Multiples validaciones null](#multiples-validacione-snull)
+* [Validaciones null](#validaciones-null)
 * [Objetos opcionales muy anidados](#accesando-objetos-opcionales-muy-anidados)
 * [Uso de constantes](#usar-el-archivo-de-constantes)
 
@@ -13,16 +13,16 @@ Unwrap justificado
 
 Recordemos que Kotlin introduce el concepto de [Null Safety](https://kotlinlang.org/docs/reference/null-safety.html), por lo cual recuerda hacer un uso **justificado** del operador `!!`
 
-Recuerda que las alternativas a usar el operador `!!` para forzar el `unwrap` de la variable son:
+En caso de no tener una razón justificada, las alternativas a usar el operador `!!` para forzar el `unwrap` de la variable son:
 
 * [Safe Calls](https://kotlinlang.org/docs/reference/null-safety.html#safe-calls)
 * [Elvis Operator](https://kotlinlang.org/docs/reference/null-safety.html#elvis-operator)
 * [Safe Casts](https://kotlinlang.org/docs/reference/null-safety.html#safe-casts)
 
-Evitar código repetido
+Evitar repetirse
 ------------
 
-Cuando te encuentres en situaciones como:
+**Evita** situaciones como:
 
 ```kotlin
 fun saveAddress(address: String, lat: String, lng: String) {
@@ -47,7 +47,7 @@ fun saveAddress(address: String, lat: String, lng: String) {
 
 ```
 
-Es preferible delegar resposabilidades a otros métodos, en este caso al método `fromJson`:
+**Es preferible** delegar resposabilidades a otros métodos, en este caso al método `fromJson`:
 
 ```kotlin
 fun saveAddress(address: String, lat: String, lng: String) {
@@ -61,12 +61,14 @@ fun saveAddress(address: String, lat: String, lng: String) {
 }
 ```
 
-Nombramiento de métodos dentro de un archivo de tipo `Repository`
+Nombramientos
 ------------
+
+### Archivos de tipo `Repository`
 
 Suponiendo tenemos una clase llamada `ServicesRepository`
 
-Es preferible nombrar a los métodos:
+**Es preferible** nombrar a los métodos:
 
 ```kotlin
 fun create(): LiveData<ApiResponse<Service>> { }
@@ -74,7 +76,7 @@ fun update(): LiveData<ApiResponse<Service>> { }
 fun get(): LiveData<ApiResponse<Service>> { }
 ```
 
-En lugar de:
+**Evita**:
 
 ```kotlin
 fun createService(): LiveData<ApiResponse<Service>> { }
@@ -82,12 +84,14 @@ fun updateService(): LiveData<ApiResponse<Service>> { }
 fun getService(): LiveData<ApiResponse<Service>> { }
 ```
 
-Multiples validaciones `null`
+Validaciones `null`
 -----
 
-Cuando te encuentres en una situación donde el método `.let` sobre dos variables opcionales pueda causar una anidación innecesaria. Agrega las siguientes [extensiones de código](https://gist.github.com/LuisBurgos/1510ad0bfbab23d65f4a14f30736b67f).
+### Multiples validaciones
 
-Es preferible:
+Cuando te encuentres en una situación donde el método `.let` sobre dos variables opcionales pueda causar una anidación innecesaria, puedes agregar las siguientes [extensiones de código](https://gist.github.com/LuisBurgos/1510ad0bfbab23d65f4a14f30736b67f). Lo anterior te da acceso al método `safeLet`
+
+**Es preferible**:
 
 ```kotlin
 safeLet(startTime, endTime) { start, end ->
@@ -95,7 +99,7 @@ safeLet(startTime, endTime) { start, end ->
 }
 ```
 
-En lugar de realizar:
+**Evita**:
 
 ```kotlin
 if(startTime != null && endTime != null) { //DO STUFF HERE }
@@ -104,7 +108,7 @@ if(startTime != null && endTime != null) { //DO STUFF HERE }
 Accesando objetos opcionales muy anidados
 -------
 
-Analizemos la siguiente porción de código fuente:
+**Evita** situaciones como:
 
 ```kotlin
 fun someMethod() {
@@ -120,14 +124,14 @@ fun someMethod() {
 }
 ```
 
-En lo anterior podemos identificar:
+Analizemos lo anterior podemos identificar:
 
-* Un uso inadecuado del `layout` al llamar a la función `setRangePinsByValue`
+* Un uso inadecuado del `code layout` al llamar a la función `setRangePinsByValue`
 * Se accede dos veces a la variable `service.dateInfo?.details?`
 * Se llamada dos veces al mismo método `.parsePrettyTimeFullDate()?.hours?.toFloat()`
-* No se sigue el lineamiento de multiple validación de `null`
+* No se sigue el lineamiento de multiple validación de `null`.
 
-Es necesario realizar algunas correcciones al archivo anterior:
+En esta situación **es preferible**:
 
 ```kotlin
 fun someMethod() {
