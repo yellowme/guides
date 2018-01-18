@@ -21,8 +21,8 @@ Generales
   * Dialoga con tus compañeros, tomen una decisión rápida y precisa.
 * **Pregunta, no exijas**. Evitamos hacer juicios y suposiciones sobre la perspectiva del autor.
   * ¿Qué piensas de nombrar esto como `userId`?)
-* **Pide aclaracione**s si no entiendes un comentario sobre tu código.
-* **Evita**r el uso de terminos como:
+* **Pide aclaraciones** si no entiendes un comentario sobre tu código.
+* **Evitar** el uso de terminos como:
   * Mi código, tú código, ese código no es mío.
   * Estúpido, tonto, etc.
 * Sé **explícito**, *recuerda* que las personas no siempre entenderán tu perspectiva y contexto.
