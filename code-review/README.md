@@ -6,28 +6,35 @@ Una guia para realizar `code reviews` y programar anticipando la revisión de tu
 *Nota:* Si estás en desacuerdo con algún lineamiento, abre un *issue* en este repositorio, los debates en los `code reviews` nutren más estos lineamientos.
 
 * [Generales](#generales)
-* [Solicitar una revisión](#solicitar-un-code-review)
-* [Revisores](#revisores)
-* [Comentar](#comentar)
-* [Responder](#responder)
-* [Escenarios](#escenarios)
 * [Lenguajes](#lenguajes)
+* [Solicitar una revisión](#solicitar-un-code-review)
+* [Revisión](#revision)
+  * [Revisores](#revisores)
+  * [Comentar](#comentar)
+  * [Responder](#responder)
+* [Escenarios](#escenarios)
 
 Generales
 --------
 
 * Aceptar que las deciciones de programación son `opiniones`.
   * Dialoga con tus compañeros, tomen una decisión rápida y precisa.
-* Pregunta, no exijas. Evitamos hacer juicios y suposiciones sobre la perspectiva del autor.
+* **Pregunta, no exijas**. Evitamos hacer juicios y suposiciones sobre la perspectiva del autor.
   * ¿Qué piensas de nombrar esto como `userId`?)
-* Pide aclaraciones si no entiendes un comentario sobre tu código.
-* Evitar el uso de terminos como:
+* **Pide aclaracione**s si no entiendes un comentario sobre tu código.
+* **Evita**r el uso de terminos como:
   * Mi código, tú código, ese código no es mío.
   * Estúpido, tonto, etc.
 * Sé **explícito**, *recuerda* que las personas no siempre entenderán tu perspectiva y contexto.
 * Sé **humilde**.
-* **No** uses el sarcasmo. El uso inteligente de *emojis* queda a tu consideración.
-* Agrega ligas directas a `commits, ramas, posts, etc`. Tu compañero te lo agradecerá.
+* **No** uses el sarcasmo. 
+* El uso inteligente de *emojis* queda a tu consideración.
+* **Agrega ligas** directas a `commits, ramas, posts, etc`. Tu compañero te lo agradecerá.
+
+Lenguajes
+--------------
+
+* [Kotlin](./KOTLIN.md)
 
 Solicitar un `code review`
 -------------------------
@@ -40,8 +47,10 @@ Solicitar un `code review`
 * **Entiende** la perspectiva de tu compañero.
 * **Responde** cada comentario.
 
-Revisores
+Revisión
 --------------
+
+### Revisores
 
 Lo primero es entender los cambios realizados:
 
@@ -57,8 +66,7 @@ Luego
 * **Aprueba** el `pull request`. Ya sea con acciones que brinde la plataforma o un comentario mencionando al autor.
 * Puedes hacer uso de :thumbsup: o felicitaciones cuando tu compañero haya hecho un trabajo más allá lo imaginable.
 
-Comentar
---------------
+### Comentar
 
 Al comentar se debe hacer referencia a los lineamientos definidos en este repositorio
 
@@ -66,22 +74,18 @@ Al comentar se debe hacer referencia a los lineamientos definidos en este reposi
 
     > Nombramiento de varialbes
 
-Responder
---------------
+### Responder
 
 Ejemplo de un buen comentario de respuesta es:
 
     Tienes razón. Muchas gracias. Arreglado en a4994ec
 
-*Nota:* Agregá la liga directa al *commit* donde hices actualizaciones, recuerda que todos tenemos otros pendientes o tareas asignadas.
+*Nota:* Agregá la liga directa al *commit* donde hiciste actualizaciones, recuerda que todos tenemos otros pendientes o tareas asignadas.
 
 Escenarios
 --------------
 
-* En caso de que existan muchos comentarios de peticiones de aclaración o soluciones alternativas. Hablen de forma directa por chat, en persona, compartiendo la pantalla, etc.
-* Si un debate se vuelve muy filosófico o académico, muevan la discusión de forma personal en alguna charla de los Viernes.
-
-Lenguajes
---------------
-
-* [Kotlin](./KOTLIN.md)
+* En caso de que existan muchos comentarios de peticiones de aclaración o soluciones alternativas. 
+  * Hablen de forma directa por chat, en persona, compartiendo la pantalla, etc.
+* Si un debate se vuelve muy filosófico o académico... 
+  * muevan la discusión de forma personal en alguna charla de los Viernes.
