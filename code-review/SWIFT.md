@@ -6,25 +6,24 @@ Swift
 * [Nil-Coalescing Operator](#nil-coalescing-operator)
 * [Código muy anidado](#código-muy-anidado)
 * [Type inferred context](#type-inferred-context)
+* [Argument labels](#argument-labels)
 
 
 Forced Unwrapping
 -------------
 
-Generalmente es peligroso hacer uso de `forced unwrapping`, ya que la aplicación se puede detener en tiempo de ejecución si el valor en cuestión es nulo. Es preferible checar que el valor no sea nulo antes de hacer el `unwrapping`.
+Generalmente es peligroso hacer uso de `forced unwrapping`, ya que la aplicación se puede detener en tiempo de ejecución si el valor en cuestión es nulo. 
+
+Evitar casos como el siguiente, donde se hace uso del operador `!`.
 
 ```swift
-let optionalInt: Int? = 5
-
-if optionalInt != nil {
-    print("optionalInt has an integer value of \(optionalInt!).")
-}
+print("optionalInt has an integer value of \(optionalInt!).")
 ```
 
 Optional Binding
 --------------
 
-Mejor aún es el uso del `optional binding` si el valor que se le quiere hacer `unwrap` se va a utilizar despúes. Esto nos permite checar que el valor no sea nulo y extraerlo en una variable o constante.
+Para evitar el uso del `forced unwrapping`, podemos usar el `optional binding`, sobretodo si el valor que se le quiere hacer `unwrap` se va a utilizar despúes. Esto nos permite checar que el valor no sea nulo y extraerlo en una variable o constante.
 
 En lugar de realizar:
 ```swift
@@ -130,4 +129,24 @@ En lugar de:
 view.textColor = UIColor.red
 let carSize = preferenceManager.get(key: Preference.carSize)
 ```
+
+Argument labels
+-----------
+
+En muchas ocasiones podemos usar `argument labels` al momento de declarar funciones. Cada parámetro en una función tiene un nombre del parámetro y puede tener una etiqueta a la izquierda, el nombre es el que se usa en el cuerpo de la función mientras que la etiqueta se usa en las llamadas a la función.
+
+Veamos el siguiente ejemplo:
+
+```swift
+func string(from date: Date, using format: OwnDateFormat) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = format.rawValue
+    dateFormatter.locale = Locale.init(identifier: localePreferred)
+    return dateFormatter.string(from: date)
+}
+
+datePicker.text =  DateHelper.string(from: currentDate, using: .local)
+```
+
+El uso de etiquetas en los parámetros permite que se llame a las funciones de una forma más expresiva, que parezca que se esta leyendo una oración, mientras que se mantiene el uso del nombre del parámetro en el cuerpo de la función.
 
