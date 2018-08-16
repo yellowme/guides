@@ -179,8 +179,8 @@ extension UIView {
 ```
 
 Para escribir un comentario:
-* Utilizar ```///``` cuando el comentario sea de una línea.
-* Utilizar ```/** */``` cuando la documentación sea mayor a una línea.
+* Utilizar ```//``` cuando el comentario sea de una línea.
+* Utilizar ```/* */``` cuando la documentación sea mayor a una línea.
 
 Por ejemplo:
 
@@ -200,7 +200,7 @@ override func viewDidLoad() {
    */
    label.font = UIFont.systemFont(ofSize: 12)
    label.textColor = .black
-   label.text = "Hola mundo"
+   label.text = "Hello world!"
 }
 ```
 
