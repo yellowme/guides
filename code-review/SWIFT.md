@@ -162,7 +162,7 @@ Por ejemplo:
 ```swift
 
 extension UIView {
-    /// Exposes the x property of the frame
+    /// Exposes the x property of the frame.
     var x: CGFloat {
         get { return frame.origin.x }
         set { frame.origin.x = newValue }
@@ -189,14 +189,14 @@ Por ejemplo:
 override func viewDidLoad() {
    super.viewDidLoad()
    
-   // Configuramos el color de fondo del controlador
+   // Set the background color of the controller.
    view.backgroundColor = .red
    
    /*
-    Configuramos varios atributos de nuestro objeto Label como: 
-    - Font: La fuente de la label.
-    - textColor: El color del texto de la label.
-    - text: El texto de la label
+    Configuration of the following attributes for the label: 
+    - Font: The font of the label.
+    - textColor: The color of the label text.
+    - text: The text of the label.
    */
    label.font = UIFont.systemFont(ofSize: 12)
    label.textColor = .black
