@@ -150,3 +150,57 @@ datePicker.text =  DateHelper.string(from: currentDate, using: .local)
 
 El uso de etiquetas en los parámetros permite que se llame a las funciones de una forma más expresiva, que parezca que se esta leyendo una oración, mientras que se mantiene el uso del nombre del parámetro en el cuerpo de la función.
 
+Documenting and commenting code
+-----------
+
+Para documentar una función, clase o struct:
+* Utilizar ```///``` cuando la documentación sea de una línea.
+* Utilizar ```/** */``` cuando la documentación sea mayor a una línea.
+
+Por ejemplo: 
+
+```swift
+
+extension UIView {
+    /// Exposes the x property of the frame.
+    var x: CGFloat {
+        get { return frame.origin.x }
+        set { frame.origin.x = newValue }
+    }
+    
+     /**
+     Add all the views passed as argument as subviews.
+     - Parameter subviews: All the UIViews, separated by ',' that should be added as subviews.
+     */
+    func add(_ subviews: UIView ...) {
+        subviews.forEach(addSubview)
+    }
+}
+```
+
+Para escribir un comentario:
+* Utilizar ```//``` cuando el comentario sea de una línea.
+* Utilizar ```/* */``` cuando la documentación sea mayor a una línea.
+
+Por ejemplo:
+
+```swift
+
+override func viewDidLoad() {
+   super.viewDidLoad()
+   
+   // Set the background color of the controller.
+   view.backgroundColor = .red
+   
+   /*
+    Configuration of the following attributes for the label: 
+    - Font: The font of the label.
+    - textColor: The color of the label text.
+    - text: The text of the label.
+   */
+   label.font = UIFont.systemFont(ofSize: 12)
+   label.textColor = .black
+   label.text = "Hello world!"
+}
+```
+
