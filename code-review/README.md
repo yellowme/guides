@@ -17,13 +17,13 @@ Una guia para realizar `code reviews` y programar anticipando la revisión de tu
 Generales
 --------
 
-* Aceptar que las deciciones de programación son `opiniones`.
+* Aceptar que las decisiones de programación son `opiniones`.
   * Dialoga con tus compañeros, tomen una decisión rápida y precisa.
 * **Pregunta, no exijas**. Evitamos hacer juicios y suposiciones sobre la perspectiva del autor.
-  * ¿Qué piensas de nombrar esto como `userId`?)
+  * ¿Qué piensas de nombrar esto como `userId`?
 * **Pide aclaraciones** si no entiendes un comentario sobre tu código.
-* **Evitar** el uso de terminos como:
-  * Mi código, tú código, ese código no es mío.
+* **Evitar** el uso de términos como:
+  * Mi código, tu código, ese código no es mío.
   * Estúpido, tonto, etc.
 * Sé **explícito**, *recuerda* que las personas no siempre entenderán tu perspectiva y contexto.
 * Sé **humilde**.
@@ -40,10 +40,10 @@ Lenguajes
 Solicitar un `code review`
 -------------------------
 
-> No lo tones personal. La revisión es sobre el código, no sobre tu persona. Es muy fácil mal interpretar la retroalimentación. Intenta leer los comentarios como clarificaciones a dudas libres de agresividad.
+> No lo tomes personal. La revisión es sobre el código, no sobre tu persona. Es muy fácil malinterpretar la retroalimentación. Intenta leer los comentarios como clarificaciones a dudas libres de agresividad.
 
 * **Agradece** los comentarios de tus compañeros.
-* **Explicar** por qué una porción de código existe y cual es su intención, incluso realiza preguntas a tu compañero.
+* **Explicar** por qué una porción de código existe y cuál es su intención, incluso realiza preguntas a tu compañero.
 * **Agrega/Comparte** la liga del `pull request` a tus compañeros de equipo.
 * **Entiende** la perspectiva de tu compañero.
 * **Responde** cada comentario.
@@ -62,10 +62,10 @@ Lo primero es entender los cambios realizados:
 Luego
 
 * **Identifica** maneras de simplificar el código sin remover funcionalidad.
-* **Ofrece** implementaciones alternativas pensando en que el autor puede ya haber considera tu alternativa. *Recuerda ser educado y a preguntar de forma correcta*
+* **Ofrece** implementaciones alternativas pensando en que el autor puede ya haber considerado tu alternativa. *Recuerda ser educado y preguntar de forma correcta*
 * **Entender** la perspectiva del autor.
 * **Aprueba** el `pull request`. Ya sea con acciones que brinde la plataforma o un comentario mencionando al autor.
-* Puedes hacer uso de :thumbsup: o felicitaciones cuando tu compañero haya hecho un trabajo más allá lo imaginable.
+* Puedes hacer uso de :thumbsup: o felicitaciones cuando tu compañero haya hecho un trabajo más allá de lo imaginable.
 
 ### Comentar
 
@@ -73,7 +73,7 @@ Al comentar se debe hacer referencia a los lineamientos definidos en este reposi
 
     [Guideline Name](www.ourawesomerepo.com):
 
-    > Nombramiento de varialbes
+    > Nombramiento de variables
 
 ### Responder
 
@@ -81,7 +81,7 @@ Ejemplo de un buen comentario de respuesta es:
 
     Tienes razón. Muchas gracias. Arreglado en a4994ec
 
-*Nota:* Agregá la liga directa al *commit* donde hiciste actualizaciones, recuerda que todos tenemos otros pendientes o tareas asignadas.
+*Nota:* Agrega la liga directa al *commit* donde hiciste actualizaciones, recuerda que todos tenemos otros pendientes o tareas asignadas.
 
 Escenarios
 --------------
@@ -89,4 +89,4 @@ Escenarios
 * En caso de que existan muchos comentarios de peticiones de aclaración o soluciones alternativas. 
   * Hablen de forma directa por chat, en persona, compartiendo la pantalla, etc.
 * Si un debate se vuelve muy filosófico o académico... 
-  * muevan la discusión de forma personal en alguna charla de los Viernes.
+  * Muevan la discusión de forma personal a alguna charla de los viernes.
